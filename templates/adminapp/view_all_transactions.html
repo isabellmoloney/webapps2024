@@ -1,0 +1,36 @@
+{% extends 'admin/base.html' %}
+{% block title %}All transactions{% endblock %}
+
+{%  block content %}
+
+<h1>All transactions</h1>
+    {% if transaction_list|length > 0  %}
+    <table>
+    <tr>
+        <th>Sender</th>
+        <th>Receiver</th>
+        <th>Amount</th>
+        <th>Currency sent in</th>
+    </tr>
+    {% for transaction in transaction_list %}
+    <tr>
+        <td>
+            {{ transaction.sender }}
+        </td>
+        <td>
+            {{ transaction.receiver }}
+        </td>
+        <td>
+            {{ transaction.amount }}
+        </td>
+        <td>
+            {{ transaction.currency }}
+        </td>
+    </tr>
+    {% endfor %}
+    </table>
+    {% else %}
+        <h5>There are no transactions to show.</h5>
+    {% endif %}
+
+{% endblock %}

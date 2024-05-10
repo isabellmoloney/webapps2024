@@ -1,0 +1,37 @@
+{% extends 'payapp/base.html' %}
+
+{% block title %}
+    Notifications
+{% endblock %}
+
+{% block content %}
+    <div class="notificationview">
+    <h2>Notifications</h2>
+
+    {% if notification_list|length > 0 %}
+        <ul>
+
+            {% for notification in notification_list %}
+               <div class="notification">
+                   {{ notification.requested_by }} has requested
+                    {{ notification.amount }}
+                   <br>
+                   You would sent 
+                   <div class="not_but">
+                <form action="{% url 'rejectrequest' notification.id %}" method="get">
+                    {% csrf_token %}
+                    <button type="submit">Reject</button>
+                </form>
+              <form action="{% url 'acceptrequest' notification.id %}" method="get">
+                        {% csrf_token %}
+                        <button type="submit">Accept</button>
+                    </form>
+                   </div>
+               </div>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <h5>There are no notifications.</h5>
+    {% endif %}
+    </div>
+{% endblock %}

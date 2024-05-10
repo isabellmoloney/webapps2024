@@ -1,0 +1,33 @@
+{% extends 'admin/base.html' %}
+{% block title %}All balances{% endblock %}
+
+{%  block content %}
+
+    <h1>All balances</h1>
+    {% if balance_list|length > 0  %}
+        <table>
+            <tr>
+                <th>User</th>
+                <th>Balance</th>
+                <th>Currency</th>
+                
+            </tr>
+            {% for balance in balance_list %}
+                <tr>
+                    <td>
+                        {{ balance.name.username }}
+                    </td>
+                    <td>
+                        {{ balance.balance }}
+                    </td>
+                    <td>
+                        {{ balance.currency }}
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+    {% else %}
+        <h5>There are no transactions to show.</h5>
+    {% endif %}
+
+{% endblock %}

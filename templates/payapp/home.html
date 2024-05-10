@@ -1,0 +1,28 @@
+{% extends 'payapp/base.html' %}
+{% block title %}Welcome to the homepage{% endblock %}
+
+{% block content %}
+    <div class="home">
+    <div class="balance"> 
+        <h3>Account balance</h3>
+    Your current account balance is <br>
+    <h2> {{ userbalance.balance}} {{userbalance.currency}} </h2>
+    
+    </div>
+    <div class="options">
+    <form action="{% url 'sentPayment' %}" method="get">
+        <button type="submit">Sent Money</button>
+    </form>
+    <form action="{% url 'requestPayment' %}" method="get">
+        <button type="submit">Request Money</button>
+    </form>
+    <form action ="{% url 'viewTransactions' %}" method="get">
+        <button type="submit">View all Transactions</button>
+    </form>
+    <form action="{%  url 'viewNotifications' %}" method="get">
+        <button type="submit">View Notifications</button>
+    </form>
+
+    </div>
+    </div>
+{% endblock %}

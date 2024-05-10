@@ -1,0 +1,19 @@
+{% extends 'payapp/base.html' %}
+
+{% block title %}
+    Transaction successful 
+{% endblock %}
+
+{% block content %}
+    <div class="moneyform">
+    {% if user.is_authenticated %}
+        <form>
+        <h4>Money was sent successfully!</h4>
+        <p>Receiver: {{ receiver_name }}</p>
+        <p>Amount: {{ amount }} </p>
+        <p> Your new balance is: {{ sender.balance }}</p>
+        </form>
+    {% endif %}
+    </div>
+
+{% endblock %}

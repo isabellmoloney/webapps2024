@@ -1,0 +1,43 @@
+{% extends "payapp/base.html" %}
+
+{% block title %}View your tranactions{% endblock %}
+
+{% block content %}
+
+    <div class="transactionview">
+    <h2>Transactions</h2>
+
+    {% if transaction_list|length > 0 %}
+        <ul>
+            {% for transaction in transaction_list %}
+                {% if transaction.sender == user.username %}
+                <div class="transaction">
+                <div class="counterparty">
+                    {{ transaction.receiver }}
+                </div>
+                <div class="amount" style="color:darkred">
+                    {{ transaction.amount }} {{ transaction.currency }}
+                </div>
+
+                </div>
+
+                {% else %}
+                    <div class="transaction">
+                        <div class="counterparty">
+                            {{ transaction.sender }}
+                        </div>
+                        <div class="amount" style="color:rgb(15, 133, 20)">
+                            {{ transaction.amount }} {{ transaction.currency }}
+                        </div>
+
+                    </div>
+
+                {% endif %}
+            {% endfor %}
+        </ul>
+
+    {% else %}
+        <h5>There are no transactions to show.</h5>
+    {% endif %}
+    </div>
+{% endblock %}

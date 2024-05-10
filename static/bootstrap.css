@@ -1,0 +1,228 @@
+a{
+    text-decoration: none;
+    cursor: pointer;
+    color: rgb(0, 88, 190);
+}
+
+a:hover{
+    color: rgb(0, 112, 224);
+}
+
+header{
+    padding: 20px 0;
+    width: 100%;
+}
+
+.sitename {
+    color: rgb(0, 88, 189);
+}
+
+.logo img{
+    width: 80px;
+    height: auto;
+    margin-right: 10px;
+}
+
+header .btn-logout{
+    background: rgb(0, 88, 189);
+    border-radius: 50px;
+    color: #FFFFFF;
+    padding: 8px 25px;
+    font-size: 14px;
+    display: flex;
+    margin-left: 10px;
+
+}
+
+header .btn-logout:hover{
+    background: rgb(0, 112, 224);
+}
+
+.navmenu {
+    padding: 0px;
+    margin-left: auto;
+}
+
+
+.navmenu ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.navmenu li{
+    position: relative;
+    padding: 18px 15px;
+}
+
+.content{
+    padding: 50px;
+    align-items: center;
+    background: #faf8f5;
+    color: rgb(0, 20,53)
+}
+
+.content h1, h2, h3, h4, h5, h6{
+    color: rgb(0, 28, 100)
+}
+
+.logincontent{
+    align-items: center;
+    margin-right: 400px;
+    background: #faf8f5;
+    margin-left: 400px;
+    padding: 100px 50px 100px 50px;
+    border-radius: 50px;
+    border: 0.0625em solid rgba(0,0,0,0.1);
+}
+
+.btn-success{
+    background: rgb(0, 88, 189);
+}
+
+.btn-success:hover{
+    background: rgb(0, 112, 224);
+}
+
+.home{
+    display: flex;
+    justify-content: center;
+}
+
+.balance{
+    padding: 1.5em;
+    position: relative;
+    text-align: center;
+    background: #FFFFFF;
+    border: 0.0625em solid rgba(0,0,0,0.1);
+    border-radius: 0.75em;
+    width: 40%;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.options{
+    display: grid;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    width: 424px;
+    padding: 50px;
+    row-gap: 10px;
+}
+
+.options form button{
+    background: rgb(0, 88, 189);
+    border-radius: 100px;
+    border: none;
+    color: rgb(255, 255, 255);
+    height: 48px;
+    cursor: pointer;
+    padding: 10px 30px;
+    line-height: 24px;
+    margin-right: 6.5px;
+    width: 250px;
+}
+
+.options form button:hover{
+    background: rgb(0, 112, 224);
+}
+
+.moneyform{
+    justify-content: center;
+}
+
+.moneyform h4{
+    text-align: center;
+}
+
+.moneyform form{
+    margin-right: 400px;
+    background: #ffffff;
+    margin-left: 400px;
+    padding: 50px 50px 10px 50px;
+    border-radius: 50px;
+    border: 0.0625em solid rgba(0,0,0,0.1);
+    justify-content: center;
+    text-align: center;
+    position: relative;
+
+}
+
+.moneyform form button{
+    background: rgb(0, 88, 189);
+    border-radius: 100px;
+    border: none;
+    color: rgb(255, 255, 255);
+    height: 48px;
+    cursor: pointer;
+    padding: 10px 30px;
+    line-height: 24px;
+    width: 150px;
+    margin-bottom: 10px;
+    margin-top: 40px;
+
+}
+
+.transactionview{
+    justify-content: center;
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
+.transaction{
+    display: flex;
+    padding: 1.5em;
+    position: relative;
+    border: 0.0625em solid rgba(0,0,0,0.1);
+    border-radius: 0.75em;
+    background: #FFFFFF;
+    flex-wrap: wrap;
+    margin-top: 10px;
+
+}
+.amount {
+    margin-left: auto;
+}
+
+.notificationview {
+    justify-content: center;
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
+.notification {
+    display: flex;
+    padding: 1.5em;
+    position: relative;
+    border: 0.0625em solid rgba(0,0,0,0.1);
+    border-radius: 0.75em;
+    background: #FFFFFF;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.not_but{
+    margin-left: auto;
+
+}
+
+.not_but button{
+    background: rgb(0, 88, 189);
+    border-radius: 100px;
+    border: none;
+    color: rgb(255, 255, 255);
+    height: 26px;
+    cursor: pointer;
+    padding: 10px 30px;
+    line-height: 12px;
+    width: 150px;
+    margin-bottom: 0px;
+    margin-top: 4px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
